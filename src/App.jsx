@@ -7,6 +7,10 @@ import {
 } from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import './App.css'
+import About from './components/About'
+import Portfolio from './components/Portfolio'
+import Contacts from './components/Contacts'
+import Main from './components/Main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,16 +30,16 @@ function App() {
           </p>
           <Switch>
             <Route path="/about">
-              <h1>About</h1>
+              <About />
             </Route>
             <Route path="/contact">
-              <h1>Contact</h1>
+              <Contacts />
             </Route>
             <Route path="/portfolio">
-              <h1>Portfolio</h1>
+              <Portfolio />
             </Route>
             <Route path="/">
-              <h1>Main</h1>
+              <Main />
             </Route>
           </Switch>
         </main>
