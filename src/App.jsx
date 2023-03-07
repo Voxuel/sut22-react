@@ -3,14 +3,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import './App.css'
-import About from './components/About'
-import Portfolio from './components/Portfolio'
-import Contacts from './components/Contacts'
-import Main from './components/Main'
+import About from './pages/About'
+import Portfolio from './pages/Portfolio'
+import Contacts from './pages/Contacts'
+import Main from './pages/Main'
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,16 +18,8 @@ function App() {
   return (
     <Router>
       <div className="grid-container">
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/portfolio">Portfolio</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/about">About</Link>
-        </nav>
+        <Navbar />
         <main>
-          <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-          </p>
           <Switch>
             <Route path="/about">
               <About />
